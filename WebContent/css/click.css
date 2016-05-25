@@ -1,0 +1,203 @@
+body
+{
+	font-family: arial;
+	font-size: 1.5em;
+	text-align: center;
+}
+table, th, td
+{
+  border: 2px solid;
+  border-style: solid;
+  /* border-style: solid ridge solid groove; */
+  padding: 5px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#table
+{
+	margin-top: 1em;
+	/*padding-top: 1em;*/
+}
+#end
+{
+  color: white;
+  background-color: black;
+}
+#startingNumbers
+{
+	font-size: 5em;
+}
+#buttonsDiv
+{
+  background-color: black;
+}
+#banner
+{
+	color: black;
+	margin: 0;
+}
+#tilesDiv
+{
+  position: absolute;
+  border: 5px solid black;
+  /*width: 25em;*/
+  /*height: 25em;*/
+  width: 41vw;
+  height: 41vw;
+  /*margin-left: 50%;*/
+  /*margin-right: auto;*/
+  /*top: 15%;*/
+  margin: 0 auto;
+  left: 28%;
+}
+.buttons
+{
+	border: none;
+	padding: 5px 20px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	margin: 0;
+}
+.buttons:hover
+{
+	color: black;
+	background-color: white;
+	/*background-color: #d9d9d9;*/
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.tiles
+{
+  /*border: none;
+  color: white;*/
+  background-color: black;
+  /*margin: 0;
+  width: 50px;
+  height: 50px;*/
+}
+/*.tiles:hover
+{
+  color: black;
+  background-color: white;
+}*/
+.oneW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 0%;
+}
+.twoW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 10%;
+}
+.threeW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 20%;
+}
+.fourW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 30%;
+}
+.fiveW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 40%;
+}
+.sixW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+}
+.sevenW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 60%;
+}
+.eightW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 70%;
+}
+.nineW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 80%;
+}
+.tenW
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 90%;
+}
+.oneH
+{
+  position: absolute;
+  top: 0%;
+}
+.twoH
+{
+  position: absolute;
+  top: 10%;
+}
+.threeH
+{
+  position: absolute;
+  top: 20%;
+}
+.fourH
+{
+  position: absolute;
+  top: 30%;
+}
+.fiveH
+{
+  position: absolute;
+  top: 40%;
+}
+.sixH
+{
+  position: absolute;
+  top: 50%;
+}
+.sevenH
+{
+  position: absolute;
+  top: 60%;
+}
+.eightH
+{
+  position: absolute;
+  top: 70%;
+}
+.nineH
+{
+  position: absolute;
+  top: 80%;
+}
+.tenH
+{
+  position: absolute;
+  top: 90%;
+}
