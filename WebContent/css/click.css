@@ -202,8 +202,8 @@ table, th, td
 	{
 	  position: absolute;
 	  width: 90vw;
-	  height: 50vh;
-	  top: 50%;
+	  height: 60vh;
+	  top: 30%;
 	}
 }
 @media only screen and (max-device-width: 480px) and (orientation: landscape)

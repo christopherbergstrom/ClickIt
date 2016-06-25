@@ -18,6 +18,7 @@ var enter;
 var again;
 var table;
 var audio = document.getElementById("audio");
+var count = 4;
 window.onload = function()
 {
   createButtons();
@@ -73,7 +74,7 @@ function createButtons()
     }
     var instructionsText = document.createElement("p");
     instructionsText.setAttribute("id", "instructions");
-    instructionsText.innerHTML = "Click the colored square as many times as you can in 30 seconds. When the time runs out the game is over.";
+    instructionsText.innerHTML = "Click the colored circle as many times as you can in 30 seconds. When the time runs out the game is over.";
     body.appendChild(instructionsText);
   });
   buttonsDiv.appendChild(instructionsBtn);
@@ -250,12 +251,20 @@ function randomTile()
   random.addEventListener("click", function click()
   {
 	points ++;
+	count ++;
 	score.innerHTML="Points: "+points;
 	audio.play();
 	this.style.transition = ".5s linear";
 	this.style.opacity = "0";
-	randomTile();
-	randomTile();
+	if (count % 4 === 0)
+	{
+		randomTile();	
+		randomTile();
+	}
+	else
+	{		
+		randomTile();
+	}
 	random.removeEventListener("click", click);
   });
 }
