@@ -27,6 +27,9 @@
 		<div id = "gameOverDiv"></div>
 
 		<div id = "enterScoreDiv"></div>
+		
+		<audio id = "audio"><source src="pop.mp3" type="audio/mp3"></audio>
+		
     <script src = "js/click.js"></script>
 	</body>
 </html>

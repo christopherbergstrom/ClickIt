@@ -17,6 +17,7 @@ var tilesDiv;
 var enter;
 var again;
 var table;
+var audio = document.getElementById("audio");
 window.onload = function()
 {
   createButtons();
@@ -242,8 +243,21 @@ var characters = [
 function randomTile()
 {
   whichTile = Math.floor(Math.random()*99);
-  var random = document.getElementById(whichTile).style.backgroundColor = whichColor();
-  var random = document.getElementById(whichTile).addEventListener("click", click);
+  var random = document.getElementById(whichTile);
+  random.style.backgroundColor = whichColor();
+  random.style.transition = ".5s linear";
+  random.style.opacity = "1";
+  random.addEventListener("click", function click()
+  {
+	points ++;
+	score.innerHTML="Points: "+points;
+	audio.play();
+	this.style.transition = ".5s linear";
+	this.style.opacity = "0";
+	randomTile();
+	randomTile();
+	random.removeEventListener("click", click);
+  });
 }
 function whichColor()
 {
@@ -278,7 +292,7 @@ function whichColor()
   }
   if (theColor === 7)
   {
-    return "#ffffff";
+    return "#000000";
   }
 }
 function click()
@@ -287,9 +301,16 @@ function click()
   // document.getElementById(x).removeEventListener("click", click);
   points ++;
   score.innerHTML="Points: "+points;
+  audio.play();
   // score.innerHTML--;
-  tilesDiv.parentNode.removeChild(tilesDiv);
-  divs();
+  this.style.transition = ".5s linear";
+  this.style.opacity = "0";
+//  var wait4 = setTimeout(function()
+//  {
+//	  
+//  }, 500);
+//  tilesDiv.parentNode.removeChild(tilesDiv);
+//  divs();
   randomTile();
 }
 function divs()
@@ -420,7 +441,7 @@ function divs()
       //   score.innerHTML--;
       // });
       tilesDiv.appendChild(tile);
-      // gameDiv.appendChild(tile);
+//       gameDiv.appendChild(tile);
     }
   }
 }
