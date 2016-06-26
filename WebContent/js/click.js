@@ -248,6 +248,7 @@ function randomTile()
   random.style.backgroundColor = whichColor();
   random.style.transition = ".5s linear";
   random.style.opacity = "1";
+  random.style.cursor="pointer";
   random.addEventListener("click", function click()
   {
 	points ++;
@@ -265,6 +266,7 @@ function randomTile()
 	{		
 		randomTile();
 	}
+	random.style.cursor="auto";
 	random.removeEventListener("click", click);
   });
 }
