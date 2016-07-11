@@ -3,6 +3,7 @@ body
 	font-family: arial;
 	font-size: 1.5em;
 	text-align: center;
+	background-color: #999999;
 }
 table, th, td
 {
@@ -72,7 +73,7 @@ table, th, td
 {
   /*border: none;
   color: white;*/
-  background-color: white;
+  background-color: #999999;
   border-radius: 50%;
   width: 4vw;
   height: 4vw;
