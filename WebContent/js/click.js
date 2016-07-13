@@ -163,8 +163,23 @@ function gameOver()
     var fi = document.getElementById("select0");
     var mi = document.getElementById("select1");
     var li = document.getElementById("select2");
+    if (typeof(Storage) !== "undefined") 
+    {
+        if (localStorage.fI) 
+            localStorage.fI = fi.value;
+        else 
+            localStorage.fI = fi.value;
+        if (localStorage.mI) 
+        	localStorage.mI = mi.value;
+        else 
+        	localStorage.mI = mi.value;
+        if (localStorage.lI) 
+        	localStorage.lI = li.value;
+        else 
+        	localStorage.lI = li.value;
+	}
     var letters = fi.value+mi.value+li.value;
-    console.log(letters);
+//    console.log(letters);
     var obj = {initials:letters, score:points};
     updateData("PUT", "rest/score", obj);
     enter.parentNode.removeChild(enter);
@@ -193,6 +208,33 @@ function popLetters()
     {
       var option = document.createElement("option");
       option.innerHTML = characters[j].character;
+      if (typeof(Storage) !== "undefined") 
+      {
+    	  if (i === 0)
+    	  {    		  
+    		  if (localStorage.fI)
+    		  {    			  
+    			  if (localStorage.fI === option.innerHTML)
+    				  option.selected = true;
+    		  }
+    	  }
+    	  else if (i === 1)
+    	  {    		  
+    		  if (localStorage.mI)
+    		  {    			  
+    			  if (localStorage.mI === option.innerHTML)
+    				  option.selected = true;
+    		  }
+    	  }
+    	  else if (i === 2)
+    	  {    		  
+    		  if (localStorage.lI)
+    		  {    			  
+    			  if (localStorage.lI === option.innerHTML)
+    				  option.selected = true;
+    		  }
+    	  }
+      }
       select.appendChild(option);
     }
     enterScoreDiv.appendChild(select);
