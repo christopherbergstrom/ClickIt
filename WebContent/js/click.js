@@ -314,39 +314,25 @@ function randomTile()
 }
 function whichColor()
 {
-  theColor = Math.floor(Math.random()*8);
+  theColor = Math.floor(Math.random()*9);
   if (theColor === 0)
-  {
     return "#0000ff";
-  }
-  if (theColor === 1)
-  {
+  else if (theColor === 1)
     return "#ff0000";
-  }
-  if (theColor === 2)
-  {
+  else if (theColor === 2)
     return "#ffff00";
-  }
-  if (theColor === 3)
-  {
+  else if (theColor === 3)
     return "#ff9900";
-  }
-  if (theColor === 4)
-  {
+  else if (theColor === 4)
     return "#ff3399";
-  }
-  if (theColor === 5)
-  {
+  else if (theColor === 5)
     return "#990099";
-  }
-  if (theColor === 6)
-  {
+  else if (theColor === 6)
     return "#00ff00";
-  }
-  if (theColor === 7)
-  {
+  else if (theColor === 7)
     return "#000000";
-  }
+  else if (theColor === 8)
+	  return "#ffffff";
 }
 function click()
 {
