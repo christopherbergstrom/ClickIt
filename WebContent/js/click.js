@@ -78,6 +78,10 @@ function createButtons()
     body.appendChild(instructionsText);
   });
   buttonsDiv.appendChild(instructionsBtn);
+  var instructionsText = document.createElement("p");
+  instructionsText.setAttribute("id", "instructions");
+  instructionsText.innerHTML = "Click the colored circle as many times as you can in 30 seconds. When the time runs out the game is over.";
+  body.appendChild(instructionsText);
 }
 function removeButtons()
 {
