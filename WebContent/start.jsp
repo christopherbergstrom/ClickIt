@@ -21,15 +21,15 @@
 		<div id = "currentTime"></div>
 
 	    <div id = "extrasDiv"></div>
-	
+
 	    <div id = "gameDiv"></div>
 
 		<div id = "gameOverDiv"></div>
 
 		<div id = "enterScoreDiv"></div>
-		
-		<audio id = "audio"><source src="pop.mp3" type="audio/mp3"></audio>
-		
+
+		<%-- <audio id = "audio"><source src="pop.mp3" type="audio/mp3"></audio> --%>
+
     <script src = "js/click.js"></script>
 	</body>
 </html>

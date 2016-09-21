@@ -17,7 +17,7 @@ var tilesDiv;
 var enter;
 var again;
 var table;
-var audio = document.getElementById("audio");
+// var audio = document.getElementById("audio");
 var count = 4;
 window.onload = function()
 {
@@ -167,19 +167,19 @@ function gameOver()
     var fi = document.getElementById("select0");
     var mi = document.getElementById("select1");
     var li = document.getElementById("select2");
-    if (typeof(Storage) !== "undefined") 
+    if (typeof(Storage) !== "undefined")
     {
-        if (localStorage.fI) 
+        if (localStorage.fI)
             localStorage.fI = fi.value;
-        else 
+        else
             localStorage.fI = fi.value;
-        if (localStorage.mI) 
+        if (localStorage.mI)
         	localStorage.mI = mi.value;
-        else 
+        else
         	localStorage.mI = mi.value;
-        if (localStorage.lI) 
+        if (localStorage.lI)
         	localStorage.lI = li.value;
-        else 
+        else
         	localStorage.lI = li.value;
 	}
     var letters = fi.value+mi.value+li.value;
@@ -212,28 +212,28 @@ function popLetters()
     {
       var option = document.createElement("option");
       option.innerHTML = characters[j].character;
-      if (typeof(Storage) !== "undefined") 
+      if (typeof(Storage) !== "undefined")
       {
     	  if (i === 0)
-    	  {    		  
+    	  {
     		  if (localStorage.fI)
-    		  {    			  
+    		  {
     			  if (localStorage.fI === option.innerHTML)
     				  option.selected = true;
     		  }
     	  }
     	  else if (i === 1)
-    	  {    		  
+    	  {
     		  if (localStorage.mI)
-    		  {    			  
+    		  {
     			  if (localStorage.mI === option.innerHTML)
     				  option.selected = true;
     		  }
     	  }
     	  else if (i === 2)
-    	  {    		  
+    	  {
     		  if (localStorage.lI)
-    		  {    			  
+    		  {
     			  if (localStorage.lI === option.innerHTML)
     				  option.selected = true;
     		  }
@@ -300,16 +300,17 @@ function randomTile()
 	points ++;
 	count ++;
 	score.innerHTML="Points: "+points;
-	audio.play();
+  var pop = new Audio("pop.mp3");
+	pop.play();
 	this.style.transition = ".5s linear";
 	this.style.opacity = "0";
 	if (count % 4 === 0)
 	{
-		randomTile();	
+		randomTile();
 		randomTile();
 	}
 	else
-	{		
+	{
 		randomTile();
 	}
 	random.style.cursor="auto";
@@ -344,13 +345,14 @@ function click()
   // document.getElementById(x).removeEventListener("click", click);
   points ++;
   score.innerHTML="Points: "+points;
-  audio.play();
+  var pop = new Audio("pop.mp3");
+	pop.play();
   // score.innerHTML--;
   this.style.transition = ".5s linear";
   this.style.opacity = "0";
 //  var wait4 = setTimeout(function()
 //  {
-//	  
+//
 //  }, 500);
 //  tilesDiv.parentNode.removeChild(tilesDiv);
 //  divs();
